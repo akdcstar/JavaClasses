@@ -2,7 +2,7 @@ package com.playtika.automation;
 
 import java.util.Scanner;
 
-public class HomeWork1_2 {
+public class HomeTask1_2 {
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
