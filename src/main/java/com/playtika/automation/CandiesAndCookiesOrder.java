@@ -16,7 +16,7 @@ public class CandiesAndCookiesOrder {
 
         float OrderPrice = calculatePrice(candiesPrice, candiesWeight, cookiesPrice, cookiesWeight);
         System.out.println();
-        System.out.println("Вы выбрали: " + candiesWeight + " кг. конфет и " + cookiesWeight + " кг. печенья");
+        System.out.printf("Вы выбрали: %.1f кг. конфет и %.1f кг. печенья", candiesWeight, cookiesWeight);
         System.out.println();
         System.out.printf("Общая стоимость вашего заказа: %s (грн.)", OrderPrice);
     }
