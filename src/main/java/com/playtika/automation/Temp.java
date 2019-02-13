@@ -2,9 +2,7 @@ package com.playtika.automation;
 
 public class Temp {
     public static void main(String[] args) {
-//        m2("sdhjfhjdsf");
 
-//        m3(4);
         calculate2(5);
     }
 
@@ -46,8 +44,7 @@ public class Temp {
     }
     public static void calculate2(int y){
         while (y == 5){
-            y = y + 1;
-//            y++;
+            y++;
             System.out.println(y);
         }
     }

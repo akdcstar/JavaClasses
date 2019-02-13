@@ -7,38 +7,38 @@ public class HomeTask2_1 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.print("Введите одно из чисел (3, 6, 9): ");
-        int n = console.nextInt();
+        int cellSize = console.nextInt();
 
 
-        for (int w = 0; w < 4; w++) {
-            web(n);
+        for (int i = 0; i < 4; i++) {
+            linkCells(cellSize);
         }
-        stars(n);
+        drawLine(cellSize);
     }
 
-    public static void web(int n) {
-        if (n % 3 != 0 || n > 9) {
+    public static void linkCells(int cellSize) {
+        if (cellSize % 3 != 0 || cellSize > 9) {
             System.out.println("Вы ввели недопустимое число");
             return;
-        } else if (n == 3) {
-            stars(n);
-        } else if (n == 6) {
-            stars(n);
+        } else if (cellSize == 3) {
+            drawLine(cellSize);
+        } else if (cellSize == 6) {
+            drawLine(cellSize);
         } else {
-            stars(n);
+            drawLine(cellSize);
 
         }
-        for (int ch = 0; ch < (n / 3); ch++) {
-            chain(n);
+        for (int i = 0; i < (cellSize / 3); i++) {
+            drawCell(cellSize);
         }
 
     }
 
 
-    public static void chain(int n) {
+    public static void drawCell(int cellSize) {
         System.out.print("*");
-        for (int z = 0; z < 4; z++) {
-            for (int i = 0; i < n; i++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < cellSize; j++) {
                 System.out.print(" ");
             }
             System.out.print("*");
@@ -46,9 +46,9 @@ public class HomeTask2_1 {
         System.out.println();
     }
 
-    public static void stars(int n) {
+    public static void drawLine(int n) {
         int f = 5 + n * 4;
-        for (int s = 0; s < f; s++) {
+        for (int i = 0; i < f; i++) {
             System.out.print("*");
         }
         System.out.println();
