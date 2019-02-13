@@ -1,5 +1,6 @@
 package com.playtika.automation.HomeTasks.Second;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HomeTask2_3 {
@@ -12,11 +13,16 @@ public class HomeTask2_3 {
     }
 
     public static void sumOfInterview(int numberOfDevelopers) {
-        for (int i = 0; numberOfDevelopers < 0; i++) {
-            int x = numberOfDevelopers - 1;
-            System.out.println(x);
+//        int[] interviewArray = new int [numberOfDevelopers];
+//        for (int i = numberOfDevelopers; i >= 1; i--){
+//            int interviewCount = i-1;
+//            System.out.println(interviewCount);
+//            interviewArray[i-1] = interviewCount;
+//            System.out.println(Arrays.;
+        int sum = numberOfDevelopers * (numberOfDevelopers - 1) / 2;
+        System.out.println(sum);
+
         }
 
-    }
 }
 
