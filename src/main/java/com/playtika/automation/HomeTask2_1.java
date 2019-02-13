@@ -47,7 +47,6 @@ public class HomeTask2_1 {
     }
 
     public static void stars(int n) {
-        System.out.println();
         int f = 5 + n * 4;
         for (int s = 0; s < f; s++) {
             System.out.print("*");

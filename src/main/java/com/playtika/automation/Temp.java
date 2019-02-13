@@ -2,10 +2,10 @@ package com.playtika.automation;
 
 public class Temp {
     public static void main(String[] args) {
-        m2("sdhjfhjdsf");
+//        m2("sdhjfhjdsf");
 
-        m3(4);
-
+//        m3(4);
+        calculate2(5);
     }
 
     public static String m1(String s) {
@@ -33,6 +33,29 @@ public class Temp {
             System.out.println("Divided by zero");
         }
 
+    }
+
+    public static void calculate(int x) {
+        switch (x) {
+            case 1:
+                System.out.println("1");
+            case 2:
+                System.out.println("2");
+        }
+
+    }
+    public static void calculate2(int y){
+        while (y == 5){
+            y = y + 1;
+//            y++;
+            System.out.println(y);
+        }
+    }
+
+    public static void calculate3(int z) {
+        for (int i = 0; i >= 0; i--){
+            System.out.println(z);
+        }
 
     }
 }
