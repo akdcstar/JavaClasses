@@ -1,4 +1,4 @@
-package com.playtika.automation;
+package com.playtika.automation.HomeTasks.First;
 
 public class HomeTask1_3 {
     public static void main(String[] args) {

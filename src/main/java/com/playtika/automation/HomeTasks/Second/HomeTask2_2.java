@@ -1,4 +1,4 @@
-package com.playtika.automation;
+package com.playtika.automation.HomeTasks.Second;
 
 import java.util.Scanner;
 

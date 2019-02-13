@@ -1,4 +1,4 @@
-package com.playtika.automation;
+package com.playtika.automation.Courses;
 
 public class Temp {
     public static void main(String[] args) {
