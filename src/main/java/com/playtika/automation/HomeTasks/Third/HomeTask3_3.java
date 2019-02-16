@@ -14,8 +14,15 @@ public class HomeTask3_3 {
 
     public static void printArray(int arraySize) {
         int[] array = new int[arraySize];
-        for (int i =0; i < arraySize; i++){
-            array[i] =  ThreadLocalRandom.current().nextInt(10000);}
-        System.out.println(array[1]);
+        for (int i = 0; i < arraySize; i++) {
+            array[i] = ThreadLocalRandom.current().nextInt(10000);
+            System.out.println(array[i]);
+        }
+        System.out.println();
+        for (int j = 0; j < arraySize; j++) {
+            if (array[j] % 3 == 0) {
+                System.out.println(array[j]);
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ public class HomeTask3_1 {
         chars = chars.trim();
 
         StringBuilder reversedChars = new StringBuilder(chars);
-        reversedChars = reversedChars.reverse();
+        reversedChars.reverse();
         String reversedCharsToString = reversedChars.toString();
 
         if (chars.equals(reversedCharsToString)) {
