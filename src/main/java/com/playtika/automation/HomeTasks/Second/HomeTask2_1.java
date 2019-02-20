@@ -31,9 +31,7 @@ public class HomeTask2_1 {
         for (int i = 0; i < (cellSize / 3); i++) {
             drawCell(cellSize);
         }
-
     }
-
 
     public static void drawCell(int cellSize) {
         System.out.print("*");

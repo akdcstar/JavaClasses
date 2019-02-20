@@ -23,6 +23,5 @@ public class HomeTask3_2 {
                 System.out.print(" ");
             }
         }
-
     }
 }

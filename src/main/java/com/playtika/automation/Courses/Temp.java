@@ -93,6 +93,7 @@ public class Temp {
         }
         System.out.println(sum);
     }
+
     public static void calculateMax() {
         int[][] asArrays = new int[5][5];
         for (int i = 0; i < 5; i++) {
@@ -104,7 +105,7 @@ public class Temp {
         for (int k = 0; k < 5; k++) {
             for (int p = 0; p < 4; p++) {
                 System.out.print(" " + asArrays[k][p]);
-                if (asArrays[k][p] > max){
+                if (asArrays[k][p] > max) {
                     max = asArrays[k][p];
                 }
             }
@@ -112,4 +113,5 @@ public class Temp {
         }
         System.out.println(max);
     }
+
 }
