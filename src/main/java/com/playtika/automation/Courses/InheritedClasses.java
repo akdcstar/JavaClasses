@@ -13,7 +13,6 @@ public class InheritedClasses {
 
         class Figure {
             double pi = Math.PI;
-            double mainSide;
 
         }
 
