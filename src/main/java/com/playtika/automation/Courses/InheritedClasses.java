@@ -10,21 +10,17 @@ import java.sql.SQLOutput;
 public class InheritedClasses {
     public static void main(String[] args) {
 
-
         class Figure {
             double pi = Math.PI;
 
         }
-
         class Circle extends Figure {
             public double circleArea(double radius) {
                 double area = pi * (Math.pow(radius, 2));
                 return area;
-
             }
 
         }
-
         class Square extends Figure {
             public double squareArea(double mainSide) {
                 double area = Math.pow(mainSide, 2);
@@ -32,7 +28,6 @@ public class InheritedClasses {
             }
 
         }
-
         class Rectangle extends Figure {
             public double rectangleArea(double mainSide, double additionalSide) {
                 double area = mainSide * additionalSide;
