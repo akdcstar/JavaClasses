@@ -10,7 +10,7 @@ public class HomeTask1_2 {
         int n = console.nextInt();
 
         calculate(n);
-
+        printDigitsOfANumber(n);
     }
 
     public static void calculate(int n) {
@@ -28,4 +28,14 @@ public class HomeTask1_2 {
         System.out.println(e + " - is the fifth digit");
     }
 
+    public static void printDigitsOfANumber(int number) {
+        int divider = 10_000;
+        for (int i = 0; i < 5; i++) {
+            int digit = number / divider;
+            number = number - digit * divider;
+            divider = divider / 10;
+            System.out.println(digit);
+        }
+        System.out.println();
+    }
 }
