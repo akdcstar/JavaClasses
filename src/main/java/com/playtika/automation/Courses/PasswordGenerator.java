@@ -12,7 +12,7 @@ public class PasswordGenerator {
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Please input length of the password: ");
+        System.out.println("Please input lengthToPoint of the password: ");
         int passwordLength = console.nextInt();
 
         for (int i = 0; i < 10; i++){
