@@ -28,14 +28,6 @@ public class Triangle {
         System.out.println("ca = " + ca);
     }
 
-    public Triangle(Point point1, Point point2, Point point3) {
-        this.point1 = point1;
-        this.point2 = point2;
-        this.point3 = point3;
-        this.ab = point1.lengthToPoint(point2);
-        this.bc = point2.lengthToPoint(point3);
-        this.ca = point3.lengthToPoint(point1);
-    }
 
     public double trianglePerimeter() {
         return ab + bc + ca;
@@ -50,7 +42,7 @@ public class Triangle {
 
     public boolean isEqualiteral() {
         if (isEqual(ab, bc) && isEqual(bc, ca)) {
-            System.out.println("Equaliteral (Равносторонний)");
+//            System.out.println("Equaliteral (Равносторонний)");
             return true;
         }
         return false;
@@ -58,7 +50,7 @@ public class Triangle {
 
     public boolean isIsoscele() {
         if (isEqual(ab, bc) || isEqual(bc, ca) || isEqual(ca, ab)) {
-            System.out.println("Isosceles (Равнобедренный)");
+//            System.out.println("Isosceles (Равнобедренный)");
             return true;
         }
         return false;
@@ -68,14 +60,15 @@ public class Triangle {
         if (Math.pow(ab, 2) == (Math.pow(bc, 2) + Math.pow(ca, 2)) || Math.pow(bc, 2) == (Math.pow(ca, 2) + Math.pow(ab, 2)) || Math.pow(ca,
                 2) == Math.pow(
                 ab, 2) + Math.pow(bc, 2)) {
-            System.out.println("Right (Прямоугольный)");
+//            System.out.println("Right (Прямоугольный)");
             return true;
         }
         return false;
     }
 
-    private boolean isEqual(double x, double y) {
+    private boolean isEqual(double sideOne, double sideTwo) {
 
-        return Double.compare(x, y) == 0;
+        return Double.compare(sideOne, sideTwo) == 0;
+
     }
 }
