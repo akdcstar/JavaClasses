@@ -16,44 +16,52 @@ public class TriangleCalculator {
         System.out.println("Вы выбрали тип треугольника:" + triangleType);
 
 
-        Triangle[] triangleArray = new Triangle[10];
+        Triangle[] triangleArray = new Triangle[100];
 
         int numberOfEqualiteral = 0;
         int numberOfIsoscele = 0;
         int numberOfRight = 0;
         int numberOfScalene = 0;
 
-        boolean flag = false;
+        boolean isFirstTriangle = false;
 
         for (int i = 0; i < triangleArray.length; i++) {
             Triangle triangle = new Triangle();
 
             triangleArray[i] = triangle;
             if (triangle.isEqualiteral()) {
-                if (triangleType == 1 && flag == false) {
-                    System.out.println("Периметр первого треугольника: " + triangle.trianglePerimeter());
-                    flag = true;
+                if (triangleType == 1 && !isFirstTriangle) {
+                    System.out.println("Периметр первого равностороннего треугольника: " + triangle.trianglePerimeter());
+                    System.out.println("Площадь первого равностороннего треугольника: " + triangle.triangleArea());
+                    isFirstTriangle = true;
+                    numberOfEqualiteral++;
                 } else {
                     numberOfEqualiteral++;
                 }
 
             } else if (triangle.isIsoscele()) {
-                if (triangleType == 2 && flag == false) {
-                    System.out.println("Периметр первого треугольника: " + triangle.trianglePerimeter());
-                    flag = true;
+                if (triangleType == 2 && !isFirstTriangle) {
+                    System.out.println("Периметр первого равнобедренного треугольника: " + triangle.trianglePerimeter());
+                    System.out.println("Площадь первого равнобедренного треугольника: " + triangle.triangleArea());
+                    isFirstTriangle = true;
+                    numberOfIsoscele++;
                 } else {
                     numberOfIsoscele++;
                 }
             } else if (triangle.isRight()) {
-                if (triangleType == 3 && flag == false) {
-                    System.out.println("Периметр первого треугольника: " + triangle.trianglePerimeter());
-                    flag = true;
+                if (triangleType == 3 && !isFirstTriangle) {
+                    System.out.println("Периметр первого прямоугольного треугольника: " + triangle.trianglePerimeter());
+                    System.out.println("Площадь первого прямоугольного треугольника: " + triangle.triangleArea());
+                    isFirstTriangle = true;
+                    numberOfRight++;
                 } else {
                     numberOfRight++;
                 }
-            } else if (triangleType == 4 && flag == false) {
-                System.out.println("Периметр первого треугольника: " + triangle.trianglePerimeter());
-                flag = true;
+            } else if (triangleType == 4 && !isFirstTriangle) {
+                System.out.println("Периметр первого произвольного треугольника: " + triangle.trianglePerimeter());
+                System.out.println("Площадь первого произвольного треугольника: " + triangle.triangleArea());
+                isFirstTriangle = true;
+                numberOfEqualiteral++;
             } else {
                 numberOfScalene++;
             }
