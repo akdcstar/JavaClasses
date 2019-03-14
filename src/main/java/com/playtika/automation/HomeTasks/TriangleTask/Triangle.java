@@ -86,7 +86,8 @@ public class Triangle {
         return 4;
     }
 
-    public void getInfo() {
+    public void getInfo(int i) {
+        System.out.println("Индекс: " + i);
         System.out.println(this.toString());
         System.out.println("Периметр: " + this.trianglePerimeter());
         System.out.println("Площадь: " + this.triangleArea());

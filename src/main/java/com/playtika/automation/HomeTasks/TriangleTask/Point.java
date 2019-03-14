@@ -11,6 +11,7 @@ public class Point {
 
         this.x = ThreadLocalRandom.current().nextInt(1, 10 + 1);
         this.y = ThreadLocalRandom.current().nextInt(1, 10 + 1);
+        this.y = ThreadLocalRandom.current().nextFloat();
     }
 
     public String toString() {

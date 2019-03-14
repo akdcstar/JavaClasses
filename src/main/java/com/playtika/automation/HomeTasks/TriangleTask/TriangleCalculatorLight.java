@@ -15,24 +15,24 @@ public class TriangleCalculatorLight {
         int triangleType = console.nextInt();
         System.out.println("Вы выбрали тип треугольника:" + triangleType);
 
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000000; i++) {
 
             Triangle triangle = TriangleGenerator.createTriangle();
 
             if (triangle.isEqualiteral() && triangleType == 1) {
-                triangle.getInfo();
+                triangle.getInfo(i);
                 return;
             }
             if (triangle.isIsoscele() && triangleType == 2) {
-                triangle.getInfo();
+                triangle.getInfo(i);
                 return;
             }
             if (triangle.isRight() && triangleType == 3) {
-                triangle.getInfo();
+                triangle.getInfo(i);
                 return;
             }
-            if (triangleType == 4) {
-                triangle.getInfo();
+            if (triangleType == 4 && !triangle.isEqualiteral() && !triangle.isIsoscele() && !triangle.isRight()) {
+                triangle.getInfo(i);
                 return;
             }
         }
