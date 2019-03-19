@@ -1,39 +1,22 @@
 package com.playtika.automation.Calculator;
 
+import java.util.Scanner;
+
 public class Calculator {
 
-    public double calculate(double value1, double value2, String operator) {
-        BinaryOperation operation = getOperationFor(operator);
 
-        if (operation == null) {
-            System.out.println("Неизвестный оператор " + operator);
-            return Double.NaN;
-        }
-        return operation.calculation(value1, value2);
-    }
-
-    private BinaryOperation getOperationFor(String operator) {
-        if ("+".equals(operator)) {
-            return new Addition();
-        } else if ("-".equals(operator)) {
-            return new Substraction();
-        } else if ("*".equals(operator)) {
-            return new Multiplication();
-        } else if ("/".equals(operator)) {
-            return new Division();
-        } else if ("^".equals(operator)){
-            return new Exponentiation();
-        } return null;
-    }
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        Scanner console = new Scanner(System.in);
+        System.out.println("Please input line: ");
+        String line = console.nextLine();
+        Parser p = new Parser();
+        ParseResult parseResult = p.parse(line);
+        BinaryOperationFactory factory = new BinaryOperationFactory();
+        BinaryOperation b = factory.create(parseResult.getOperator());
+        double final_result = b.calculation(parseResult.getLeft(), parseResult.getRight());
+        System.out.println("Result: " + final_result);
 
-        System.out.println(calculator.calculate(123.123, 123.123, "+"));
-        System.out.println(calculator.calculate(123.123, 123.123, "-"));
-        System.out.println(calculator.calculate(123.123, 123.123, "*"));
-        System.out.println(calculator.calculate(123.123, 123.123, "/"));
-        System.out.println(calculator.calculate(123.123, 123.123, "^"));
 
     }
 }
