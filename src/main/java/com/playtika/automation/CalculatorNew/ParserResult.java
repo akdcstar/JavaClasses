@@ -2,14 +2,10 @@ package com.playtika.automation.CalculatorNew;
 
 public class ParserResult {
     private double left;
-    private String operator;
+    private Operator operator;
     private double right;
 
-    public ParserResult(){
-        System.out.println("Wrong expression");
-    }
-
-    public ParserResult(double left, String operator, double right) {
+    public ParserResult(double left, Operator operator, double right) {
         this.left = left;
         this.operator = operator;
         this.right = right;
@@ -20,7 +16,7 @@ public class ParserResult {
         return left;
     }
 
-    public String getOperator() {
+    public Operator getOperator() {
         return operator;
     }
 
