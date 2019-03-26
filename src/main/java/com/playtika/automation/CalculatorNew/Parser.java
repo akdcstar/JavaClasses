@@ -2,6 +2,7 @@ package com.playtika.automation.CalculatorNew;
 
 public class Parser {
 
+
     public ParserResult parse(String line) {
         String[] splittedData = line.split(" ");
 
@@ -10,29 +11,36 @@ public class Parser {
             double left = Double.parseDouble(splittedData[0]);
             String operator = splittedData[1];
             double right = Double.parseDouble((splittedData[2]));
-
-//            return new ParserResult(left, operator, right);
-            if (operator == "+") {
-                return Operator.ADDITION;
-            } else if (operator == "-") {
-                return Operator.SUBTRACTION;
-            } else if (operator == "*") {
-                return Operator.MULTIPLICATION;
-            } else if (operator == "/") {
-                return Operator.DIVISION;
-            } else if (operator == "^") {
-                return Operator.EXPONENTIATION;
-            } else if (operator == "log") {
-                return Operator.LOGARITHM;
-            } else if (operator == "sqrt") {
-                return Operator.SQUARE_ROOT;
-            } throw new IllegalArgumentException("Incorrect operator");
-
-
+            Operator op = selectOperator(operator);
+            return new ParserResult(left, op, right);
         }
-
         throw new IllegalArgumentException("Incorrect expression");
+    }
 
+    private Operator selectOperator(String operator) {
 
+        if (operator.equals("+")) {
+            return Operator.ADDITION;
+        }
+        if (operator.equals("-")) {
+            return Operator.SUBTRACTION;
+        }
+        if (operator.equals("*")) {
+            return Operator.MULTIPLICATION;
+        }
+        if (operator.equals("/")) {
+            return Operator.DIVISION;
+        }
+        if (operator.equals("^")) {
+            return Operator.EXPONENTIATION;
+        }
+        if (operator.equals("log")) {
+            return Operator.LOGARITHM;
+        }
+        if (operator.equals("sqrt")) {
+            return Operator.ROOT;
+        }
+        throw new IllegalArgumentException("Incorrect operator");
     }
 }
+

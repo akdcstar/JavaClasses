@@ -1,24 +1,38 @@
 package com.playtika.automation.CalculatorNew;
 
+import static com.playtika.automation.CalculatorNew.Operator.ADDITION;
+import static com.playtika.automation.CalculatorNew.Operator.DIVISION;
+import static com.playtika.automation.CalculatorNew.Operator.EXPONENTIATION;
+import static com.playtika.automation.CalculatorNew.Operator.LOGARITHM;
+import static com.playtika.automation.CalculatorNew.Operator.MULTIPLICATION;
+import static com.playtika.automation.CalculatorNew.Operator.ROOT;
+import static com.playtika.automation.CalculatorNew.Operator.SUBTRACTION;
+
 public class MathOperationFactory {
 
-    public MathOperation selectOperation(String operator) {
-        if (operator.equals("+")) {
+    public MathOperation selectOperation(Operator operator) {
+        if (operator == ADDITION) {
             return new Addition();
-        } else if (operator.equals("-")) {
-            return new Substraction();
-        } else if (operator.equals("*")) {
-            return new Multiplication();
-        } else if (operator.equals("/")) {
-            return new Division();
-        } else if (operator.equals("^")) {
-            return new Exponentiation();
-        } else if (operator.equals("log")) {
-            return new Logarithm();
-        }else if (operator.equals("sqrt")){
-            return new SquareRoot();
         }
-        return new WrongOperator();
+        if (operator == SUBTRACTION) {
+            return new Substraction();
+        }
+        if (operator == MULTIPLICATION) {
+            return new Multiplication();
+        }
+        if (operator == DIVISION) {
+            return new Division();
+        }
+        if (operator == EXPONENTIATION) {
+            return new Exponentiation();
+        }
+        if (operator == LOGARITHM) {
+            return new Logarithm();
+        }
+        if (operator == ROOT) {
+            return new Root();
+        }
+        throw new IllegalArgumentException("Incorrect Operation");
     }
 
 }

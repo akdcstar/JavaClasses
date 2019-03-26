@@ -7,7 +7,7 @@ public enum Operator {
     DIVISION,
     EXPONENTIATION,
     LOGARITHM,
-    SQUARE_ROOT;
+    ROOT
 
 
 }
