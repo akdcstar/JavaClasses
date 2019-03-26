@@ -1,35 +1,27 @@
 package com.playtika.automation.CalculatorNew;
 
-import static com.playtika.automation.CalculatorNew.Operator.ADDITION;
-import static com.playtika.automation.CalculatorNew.Operator.DIVISION;
-import static com.playtika.automation.CalculatorNew.Operator.EXPONENTIATION;
-import static com.playtika.automation.CalculatorNew.Operator.LOGARITHM;
-import static com.playtika.automation.CalculatorNew.Operator.MULTIPLICATION;
-import static com.playtika.automation.CalculatorNew.Operator.ROOT;
-import static com.playtika.automation.CalculatorNew.Operator.SUBTRACTION;
-
 public class MathOperationFactory {
 
     public MathOperation selectOperation(Operator operator) {
-        if (operator == ADDITION) {
+        if (operator == Operator.ADDITION) {
             return new Addition();
         }
-        if (operator == SUBTRACTION) {
+        if (operator == Operator.SUBTRACTION) {
             return new Substraction();
         }
-        if (operator == MULTIPLICATION) {
+        if (operator == Operator.MULTIPLICATION) {
             return new Multiplication();
         }
-        if (operator == DIVISION) {
+        if (operator == Operator.DIVISION) {
             return new Division();
         }
-        if (operator == EXPONENTIATION) {
+        if (operator == Operator.EXPONENTIATION) {
             return new Exponentiation();
         }
-        if (operator == LOGARITHM) {
+        if (operator == Operator.LOGARITHM) {
             return new Logarithm();
         }
-        if (operator == ROOT) {
+        if (operator == Operator.ROOT) {
             return new Root();
         }
         throw new IllegalArgumentException("Incorrect Operation");
