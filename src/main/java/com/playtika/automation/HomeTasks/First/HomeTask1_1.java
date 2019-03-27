@@ -15,7 +15,7 @@ public class HomeTask1_1 {
         long n = 4;
 
         long task1 = (x - (y + 123) / z * n);
-        System.out.println("Result of calculation in long: " + task1);
+        System.out.println("Result of calculate in long: " + task1);
     }
 
     public static void calculationInInt() {
@@ -25,7 +25,7 @@ public class HomeTask1_1 {
         int n = 4;
 
         int task2 = (x + (50 - y * z) / n) - x;
-        System.out.println("Result of calculation in int: " + task2);
+        System.out.println("Result of calculate in int: " + task2);
     }
 
     public static void calculationInFloat() {
@@ -35,7 +35,7 @@ public class HomeTask1_1 {
         float n = 4;
 
         float task3 = (x / (y * (z - 1) - 564) + n);
-        System.out.println("Result of calculation in float: " + task3);
+        System.out.println("Result of calculate in float: " + task3);
     }
 
     public static void calculationInDouble() {
@@ -45,7 +45,7 @@ public class HomeTask1_1 {
         double n = 4;
 
         double task4 = -x / -y + z / (n + 15);
-        System.out.println("Result of calculation in double: " + task4);
+        System.out.println("Result of calculate in double: " + task4);
     }
 }
 

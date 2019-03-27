@@ -14,7 +14,7 @@ public class Calculator {
         MathOperationFactory factory = new MathOperationFactory();
 
         MathOperation operation = factory.selectOperation(parserResult.getOperator());
-        double result = operation.calculation(parserResult.getLeft(), parserResult.getRight());
+        double result = operation.calculate(parserResult.getLeft(), parserResult.getRight());
 
         System.out.println(result);
 
