@@ -2,11 +2,11 @@ package com.playtika.automation.Grep;
 
 import java.util.Scanner;
 
-public class Runner {
+class Runner {
     public static void main(String[] args) {
 
         Scanner consoleFilePath = new Scanner(System.in);
-        System.out.println("Please input file path (e.g. 'C:\\Users\\akhusainov\\_DC\\_Docs\\JavaTestFile.txt): '");
+        System.out.println("Please input file path (e.g. 'C:\\Users\\akhusainov\\_DC\\_Docs\\JavaTestFile.txt'): ");
         String filePath = consoleFilePath.nextLine();
 
         Scanner consolePattern = new Scanner(System.in);

@@ -6,9 +6,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ReadFile {
+class ReadFile {
 
-    public void read(String filePath, String pattern) {
+    void read(String filePath, String pattern) {
         try (Scanner scanFile = new Scanner(new File(filePath))) {
             int counter = 0;
 
@@ -22,7 +22,6 @@ public class ReadFile {
 
                     System.out.println("Line: " + counter + ".  " + fileText);
                 }
-                System.out.println("There is no any match in file with your pattern");
             }
 
         } catch (FileNotFoundException e) {
