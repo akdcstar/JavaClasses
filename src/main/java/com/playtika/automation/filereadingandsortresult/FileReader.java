@@ -10,7 +10,7 @@ public class FileReader {
 
     public void read(String filePath) {
         System.out.println(filePath);
-        TreeMap<String, Integer> textFromFile = new TreeMap();
+        TreeMap<String, Integer> textFromFile = new TreeMap<>();
 
         try (Scanner scanFile = new Scanner(new File(filePath))) {
 
